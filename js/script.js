@@ -16,6 +16,10 @@ let addImg = document.querySelector('#js-addImg');
 let name = document.querySelector('#js-name');
 let fileReader = new FileReader();
 
+msgList.style.display = 'none';
+userItems.style.display = 'none';
+blockUsersTitle.style.display = 'none';
+
 userFoto.addEventListener('click', () => {
     addImg.style.display = 'block';
 });
@@ -81,7 +85,11 @@ login.addEventListener('submit', (e) => {
     e.preventDefault();
 
     socket.emit('new user', { userName: userName.value, userNik: userNik.value }, (data) => {
-        name.textContent = data
+        name.textContent = data;
+
+        msgList.style.display = 'block';
+        userItems.style.display = 'block';
+        blockUsersTitle.style.display = 'block';
     });
 
     login.style.display = 'none';
