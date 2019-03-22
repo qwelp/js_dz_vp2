@@ -1,0 +1,308 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.hide {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input:focus, input:active {
+    outline: none;
+}
+
+.chat {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.chatLeft {
+    flex-basis: 20%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f48365;
+}
+
+.chatContent {
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.userItems {
+    margin: 20px 0 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.userItems li {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.userItems__title {
+    margin: 20px 20px 0 40px;
+    font-size: 14px;
+    color: #ffffff;
+    display: none;
+}
+
+.msgForm {
+    width: 100%;
+    margin: auto 20px 20px 20px;
+}
+
+.msgForm__text {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    padding-left: 10px;
+}
+
+.msgFormWrap {
+    display: flex;
+    width: 94%;
+    box-sizing: border-box;
+}
+
+.msgFormWrap__col {
+    display: flex;
+    align-items: center;
+}
+.msgFormWrap__col:first-child {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+
+.msgList {
+    list-style-type: none;
+    height: 100vh;
+    overflow: auto;
+}
+
+.msgList li {
+    display: flex;
+}
+
+.msgList__col:first-child {
+
+}
+
+.msgList__img {
+    width: 65px;
+    height: 65px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.msgList__img img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    vertical-align: middle;
+}
+
+.msgList__col:last-child {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.loginBody {
+    background-color: #f1f0f1;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+}
+
+.login__title {
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.loginForm {
+
+}
+
+.loginWrap {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.loginWrap__row:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.msgFormInputWrap {
+    width: 100%;
+}
+
+.loginInput, .msgFormInputWrap {
+    border-radius: 10px;
+    border: 2px solid #f1f0f1;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.loginInput__input {
+    width: 100%;
+    border: 0;
+}
+
+.loginWrap__right {
+    text-align: right;
+}
+
+.login__btn, .msgFormWrap button {
+    background-color: #f48365;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: 0;
+}
+
+.userInfo {
+    display: flex;
+    margin: 20px 20px 20px 30px;
+    align-items: center;
+}
+
+.userInfo__col {
+
+}
+
+.userInfo__col:last-child {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.userInfo__img {
+    width: 65px;
+    height: 65px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.userInfo__img img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    vertical-align: middle;
+}
+
+.userInfo__fio {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.addImg {
+    background-color: #f1f0f1;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    display: none;
+}
+
+.addImg__title {
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.addImgWrap {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.addImgWrap__row:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addImgWrap__row-right {
+    text-align: right;
+}
+
+.addImgInput {
+    width: 150px;
+    height: 150px;
+    border: 2px dotted #c5c4c5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.addImgInput__msg {
+    text-transform: uppercase;
+    color: #c5c4c5;
+    font-size: 10px;
+}
+
+.addImg button {
+    margin-left: 10px;
+}
+
+
+.addImgInput img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

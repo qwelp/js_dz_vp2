@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="chat">
+        <div class="chatLeft">
+            <div class="userInfo">
+                <div class="userInfo__col">
+                    <div class="userInfo__img">
+                        <img id="js-userFoto" src="images/no-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="userInfo__col">
+                    <div class="userInfo__fio" id="js-name">Добро пожаловать!</div>
+                </div>
+            </div>
+            <h2 class="userItems__title" id="js-blockUsersTitle">Участники (<span id="js-usersCount">0</span>)</h2>
+            <ul class="userItems" id="js-userItems"></ul>
+        </div>
+        <div class="chatContent">
+            <ul class="msgList" id="js-msgList"></ul>
+            <div class="msgForm">
+                <form action="" id="js-msgForm">
+                    <div class="msgFormWrap">
+                        <div class="msgFormWrap__col">
+                            <div class="msgFormInputWrap">
+                                <input placeholder="Введите сообщение" class="msgForm__text" type="text" id="js-msg">
+                            </div>
+                        </div>
+                        <div class="msgFormWrap__col"><button>Отправить</button></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="addImg" id="js-addImg">
+        <div class="addImg__title">Загрузка фото</div>
+        <div class="addImgWrap">
+            <div class="addImgWrap__row">
+                <label for="photoInput">
+                    <div class="addImgInput" id="js-addImgInput">
+                        <div class="addImgInput__msg">перетащите сюда фото</div>
+                    </div>
+                    <div class="hide">
+                        <input type="file" name="photoInput" id="photoInput">
+                    </div>
+                </label>
+            </div>
+            <div class="addImgWrap__row addImgWrap__row-right">
+                <button id="js-addImg-cancel" class="login__btn">Отмена</button>
+                <button id="js-addImg-upload" class="login__btn">Загрузить</button>
+            </div>
+        </div>
+    </div>
+    <div class="login" id="js-login">
+        <div class="loginBody">
+            <div class="login__title">Авторизация</div>
+            <form action="" class="loginForm" id="js-loginForm">
+                <div class="loginWrap">
+                    <div class="loginWrap__row">
+                        <div class="loginInput">
+                            <input class="loginInput__input" id="js-userName" required type="text" id="js-fio" value="name">
+                        </div>
+                    </div>
+                    <div class="loginWrap__row">
+                        <div class="loginInput">
+                            <input class="loginInput__input" id="js-userNik" required type="text" value="nik">
+                        </div>
+                    </div>
+                    <div class="loginWrap__row loginWrap__right">
+                        <button class="login__btn">Войти</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
